@@ -14,7 +14,7 @@ from openai import OpenAI
 # DeepSeek API endpoint and key
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1"
 DEEPSEEK_API_KEY = os.getenv('DEEPSEEK_API_KEY')
-print(DEEPSEEK_API_KEY)
+#print(DEEPSEEK_API_KEY)
 # Email settings
 SMTP_SERVER = "smtp.qq.com"
 SMTP_USERNAME = os.getenv('SMTP_USERNAME')
