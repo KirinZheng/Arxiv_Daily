@@ -36,7 +36,7 @@ def get_arxiv_papers(query, delay=3):
     client = arxiv.Client()
     search = arxiv.Search(
         query=query,
-        max_results=2,  # Increase max_results to get more papers
+        max_results=50,  # Increase max_results to get more papers
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
@@ -48,6 +48,7 @@ def get_arxiv_papers(query, delay=3):
             if "github" in link.href or "gitlab" in link.href:
                 code_link = link.href
                 break
+        #result.submission
         papers.append({
             "title": result.title,
             "summary": result.summary.replace('\n', ' '),
@@ -195,7 +196,7 @@ def get_balance():
 
 # Main function
 def main():
-    query = "cs.AI OR cs.LG"
+    query = "cs.NE OR cs.CL OR cs.LG"
 
     arxiv_papers = get_arxiv_papers(query)
     biorxiv_papers = get_biorxiv_papers()
