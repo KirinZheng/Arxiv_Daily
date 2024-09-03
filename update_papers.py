@@ -16,7 +16,7 @@ DEEPSEEK_API_URL = "https://api.deepseek.com/v1"
 DEEPSEEK_API_KEY = os.getenv('DEEPSEEK_API_KEY')
 
 # Email settings
-SMTP_SERVER = "smtp.163.com"
+SMTP_SERVER = "smtp.qq.com"
 SMTP_USERNAME = os.getenv('SMTP_USERNAME')
 SMTP_PASSWORD = os.getenv('SMTP_PASSWORD')
 EMAIL_RECIPIENT = os.getenv('EMAIL_RECIPIENT')
